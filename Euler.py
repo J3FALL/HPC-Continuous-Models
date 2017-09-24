@@ -16,7 +16,7 @@ def euler():
         y_eval.append(y_eval[i - 1] + h * fun(x[i - 1], y_eval[i - 1]))
         delta_y.append(h * fun(y_eval[i], x[i]))
         y_real.append(real_fun(x[i]))
-        eps.append(y_real[i] - y_eval[i])
+        eps.append(abs(y_real[i] - y_eval[i]))
 
     # print in table format
     print(y_eval)
